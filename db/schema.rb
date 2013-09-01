@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130901211615) do
+ActiveRecord::Schema.define(version: 20130901214315) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 20130901211615) do
     t.datetime "updated_at"
     t.integer  "speaker_id"
     t.integer  "session_time_id"
+    t.integer  "session_room_id"
   end
 
   create_table "speakers", force: true do |t|
