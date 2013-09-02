@@ -28,5 +28,13 @@ describe ScheduleController do
 
       expect(assigns(:session_rooms)).to match_array([session_room1, session_room2])
     end
+    it "loads all of the session times into @session_times" do
+      session_time1 = SessionTime.create!(:time => "09:00:00.000000")
+      session_time2 = SessionTime.create!(:time => "10:00:00.000000")
+
+      get :index
+
+      expect(assigns(:session_times)).to match_array([session_time1, session_time2])
+    end
   end
 end
