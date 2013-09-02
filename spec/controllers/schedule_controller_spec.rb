@@ -20,5 +20,13 @@ describe ScheduleController do
       get :index
       expect(response).to render_template("index")
     end
+    it "loads all of the session rooms into @session_rooms" do
+      session_room1 = SessionRoom.create!(name: "room1")
+      session_room2 = SessionRoom.create!(name: "room2")
+
+      get :index
+
+      expect(assigns(:session_rooms)).to match_array([session_room1, session_room2])
+    end
   end
 end
