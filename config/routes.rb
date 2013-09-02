@@ -9,13 +9,13 @@ Codecamp::Application.routes.draw do
   root :to => 'high_voltage/pages#show', :id => 'home'
 
   #Speakers
-  get '/speakers', to: 'speakers#index'
-  get '/speakers/:id', to: 'speakers#show', as: 'speaker'
+  resources :speakers, :only => [ :show, :index ]
 
   #Sessions
-  get '/sessions', to: 'sessions#index'
-  get '/sessions/:id', to: 'sessions#show', as: 'session'
+  resources :sessions, :only => [ :show, :index ]
 
+  #Schedule
+  get '/schedule', to: 'schedule#index'
 
   get 'browser' => 'browser#index'
 
