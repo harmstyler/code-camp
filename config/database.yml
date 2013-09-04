@@ -20,9 +20,9 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: sdcc_production
+  database: debj16l5mgmq7k
   pool: 5
-  username: sdcc
+  username: smsjqvohakkxqy
   password:
 
 # cucumber:
