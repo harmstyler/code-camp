@@ -1,3 +1,5 @@
+development:
+  adapter: postgresql
   encoding: unicode
   database: sdcc_development
   pool: 5
@@ -23,5 +25,5 @@ production:
   username: sdcc
   password:
 
-cucumber:
-  <<: *test
+# cucumber:
+#   <<: *test
