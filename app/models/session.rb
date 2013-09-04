@@ -3,4 +3,8 @@ class Session < ActiveRecord::Base
   belongs_to :speaker
   belongs_to :session_time
   belongs_to :session_room
+
+  def to_s
+    title
+  end
 end
