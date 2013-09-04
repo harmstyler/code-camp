@@ -17,13 +17,13 @@ test:
   username: sdcc
   password:
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: debj16l5mgmq7k
-  pool: 5
-  username: smsjqvohakkxqy
-  password:
+# production:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: debj16l5mgmq7k
+#   pool: 5
+#   username: smsjqvohakkxqy
+#   password:
 
 # cucumber:
 #   <<: *test
