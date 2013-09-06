@@ -1,0 +1,11 @@
+footer.main {
+    padding: 1em;
+    background: white;
+}
+
+@media only screen and (min-width: 64em) {
+    footer.main {
+        @include css3-calc('padding-left', '50% - 30em');
+        @include css3-calc('padding-right', '50% - 30em');
+    }
+}
