@@ -8,7 +8,7 @@ class ScheduleController < ApplicationController
       # @schedule.push(session_time)
       rooms = []
       @session_rooms.each do |room|
-        @session = Session.find_by session_time_id: session_time.id, session_room_id: room.id
+        @session = Session.where(speaker_id: Speaker.where(display: true)).find_by session_time_id: session_time.id, session_room_id: room.id
         if @session
           rooms.push(@session)
         else
