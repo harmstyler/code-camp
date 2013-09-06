@@ -1,5 +1,7 @@
+@import "variables";
+@import "mixins";
 body {
-    background: $bodyColor url(/assets/hero.jpg) no-repeat center top;
+    background: $bodyColor url(<%= asset_url 'hero.jpg' %>) no-repeat center top;
     background-size: auto 300px;
     background-attachment: fixed;
 }
