@@ -55,3 +55,5 @@ gem 'formtastic',          github: 'justinfrench/formtastic'
 gem 'unicorn'
 gem 'pg'
 gem 'rails_12factor', group: :production
+
+gem 'navigasmic'

@@ -65,17 +65,8 @@
 
 </head>
 <body>
-    <header class="main">
-        <a href="/"><h1 class="title">South Dakota Code Camp</h1></a>
-        <a class="open-close-menu-switch" onclick="sdcc.toggleMenu();"></a>
-        <nav id="mainNav" class="main">
-            <a href="#">Speakers</a>
-            <a href="#">Sessions</a>
-            <a href="#">Schedule</a>
-            <a href="#">Location</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
+
+    <%= render "parts/header" %>
 
     <%= yield %>
 

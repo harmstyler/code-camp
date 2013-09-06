@@ -140,6 +140,7 @@ GEM
     minitest (4.7.5)
     multi_json (1.7.7)
     multi_test (0.0.1)
+    navigasmic (1.0.5)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     orm_adapter (0.4.0)
@@ -247,6 +248,7 @@ DEPENDENCIES
   inherited_resources!
   jbuilder (~> 1.2)
   jquery-rails
+  navigasmic
   pg
   pry
   puma
