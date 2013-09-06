@@ -29,12 +29,12 @@ describe SpeakersController do
       expect(response).to render_template("index")
     end
 
-    it "loads all of the speakers into @speakers" do
-      speaker1 = Speaker.create!(firstname: "Seth", lastname: "Larson", email: "tyler@blendisimo.com")
+    it "loads the correct speakers into @speakers" do
+      speaker1 = Speaker.create!(firstname: "Seth", lastname: "Larson", email: "tyler@blendisimo.com", display: true)
       speaker2 = Speaker.create!(firstname: "Tyler", lastname: "Harms", email: "seth@blendisimo.com")
       get :index
 
-      expect(assigns(:speakers)).to match_array([speaker1, speaker2])
+      expect(assigns(:speakers)).to match_array([speaker1])
     end
   end
   describe "GET #show" do

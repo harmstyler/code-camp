@@ -30,8 +30,8 @@ describe SessionsController do
       expect(response).to render_template("index")
     end
 
-    it "loads all of the sessions into @sessions" do
-      session_speaker1 = Speaker.create!(firstname: "Seth", lastname: "Larson", email: "tyler@blendisimo.com")
+    it "loads the correct sessions into @sessions" do
+      session_speaker1 = Speaker.create!(firstname: "Seth", lastname: "Larson", email: "tyler@blendisimo.com", display: true)
       session_speaker2 = Speaker.create!(firstname: "Tyler", lastname: "Harms", email: "seth@blendisimo.com")
 
       session1 = Session.create!(speaker: session_speaker1, title: "Speaker 1 test title")
@@ -39,7 +39,7 @@ describe SessionsController do
 
       get :index
 
-      expect(assigns(:sessions)).to match_array([session1, session2])
+      expect(assigns(:sessions)).to match_array([session1])
     end
   end
   describe "GET #show" do

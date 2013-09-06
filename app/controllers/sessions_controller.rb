@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   # /sessions
   def index
-    @sessions = Session.all
+    @sessions = Session.where(speaker_id: Speaker.where(display: true))
   end
   # /sessions/:id
   def show
