@@ -27,11 +27,7 @@ Navigasmic.setup do |config|
   # Here's a basic example:
   config.semantic_navigation :mainNav do |n|
 
-    n.item 'Speakers', '/speakers'
-    n.item 'Sessions', '/sessions'
-    n.item 'Schedule', '/schedule'
-    n.item 'Location', '/location'
-    n.item 'Contact', '/contact'
+
 
   end
 
