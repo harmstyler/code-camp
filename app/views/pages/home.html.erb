@@ -13,25 +13,13 @@
     <section class="main-content">
         <h2 class="cutout">What is Code Camp?</h2>
         <h4 class="cutout">
-            <time>November 22, 2013</time> - Sioux Falls, SD
+            <time>November 9, 2013</time> - Sioux Falls, SD
         </h4>
         <p>This is an event hosted by the Sioux Falls Developers Group and South Dakota .Net User Group with the sponsorship and support from and many area businesses. Most of you visiting may be wonder "Whats a code camp?" Here is the basic idea.</p>
         <p>Sign up for notififactions and other cool stuff that you don’t want to miss.</p>
     </section>
     <section class="email-signup">
-        <form>
-            <div class="field">
-                <label for="txtName">Name</label>
-                <input type="text" id="txtName" />
-            </div>
-            <div class="field">
-                <label for="txtEmail">Email</label>
-                <input type="email" id="txtEmail" />
-            </div>
-            <div class="field">
-                <button type="submit" id="emailSubmit">Submit</button>
-            </div>
-        </form>
+        <%= render "parts/subscriber_form" %>
     </section>
 </main>
 <section class="updates" role="complimentary">

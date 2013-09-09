@@ -1,0 +1,14 @@
+<% # TODO: Add Labels %>
+<%= form_tag(subscribers_path, :method => 'post', :id => 'new_subscriber', :class => 'email-signup') do %>
+  <div class="field">
+  <%= label_tag 'subscriber[name]', 'Name' %>
+  <%= text_field_tag('subscriber[name]') %>
+  </div>
+  <div class="field">
+  <%= label_tag 'subscriber[email]', 'Email' %>
+  <%= email_field_tag('subscriber[email]') %>
+  </div>
+  <div class="field">
+  <%= button_tag "Submit" %>
+  </div>
+<% end %>

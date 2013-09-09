@@ -14,6 +14,10 @@ Codecamp::Application.routes.draw do
   #Sessions
   resources :sessions, :only => [ :show, :index ]
 
+  #Subscribers
+  resources :subscribers
+
+
   #Schedule
   get '/schedule', to: 'schedule#index'
 

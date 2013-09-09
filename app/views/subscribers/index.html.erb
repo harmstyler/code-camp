@@ -1,0 +1,9 @@
+<% if @subscribers.any? %>
+  <ul>
+    <% @subscribers.each do |subscriber| %>
+    <li class="subscriber"><%= subscriber.name %> - <%= subscriber.email %></li>
+    <% end %>
+  </ul>
+<% else %>
+No subscribers
+<% end %>
