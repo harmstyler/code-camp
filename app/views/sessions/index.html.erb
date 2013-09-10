@@ -1,9 +1,14 @@
+<section class="session-index main-content" id="SessionIndex">
+<h1>Sessions</h1>
+
 <% if @sessions.any? %>
   <ul>
     <% @sessions.each do |session| %>
-    <li class="session"><%= session.title %></li>
+    <li class="session"><%= link_to session.title, session_path(session) %></li>
     <% end %>
   </ul>
 <% else %>
 No sessions
 <% end %>
+
+</section>

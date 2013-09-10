@@ -1,5 +1,9 @@
+<section class="session-show main-content">
+
 <% if @speaker %>
-<h1 class="speaker"><%= @speaker.firstname %></h1>
+<h1 class="pagetitle"><%= @speaker.fullname %></h1>
 <% else %>
 No speaker found
 <% end %>
+
+</section>

@@ -1,9 +1,14 @@
+<section class="speaker-index main-content" id="SpeakerIndex">
+<h1>Speakers</h1>
+
 <% if @speakers.any? %>
   <ul>
     <% @speakers.each do |speaker| %>
-    <li class="speaker"><%= speaker.firstname + " " + speaker.lastname %></li>
+    <li class="speaker"><%= link_to speaker.fullname, speaker_path(speaker) %></li>
     <% end %>
   </ul>
 <% else %>
 No speakers
 <% end %>
+
+</section>

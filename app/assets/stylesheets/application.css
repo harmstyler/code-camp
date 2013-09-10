@@ -13,6 +13,10 @@
  *= require header
  *= require navigation
  *= require content
+ *= require schedule
+ *= require sessions
+ *= require speakers
+ *= require subscribers
  *= require complimentary
  *= require footer
  *= require_self
