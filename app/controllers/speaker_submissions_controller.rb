@@ -12,7 +12,9 @@ class SpeakerSubmissionsController < ApplicationController
 
     respond_to do |format|
       if @speaker_submission.save
-        format.html { redirect_to root_path, notice: 'You have been successfully added to the subscriber list.' }
+        # Tell the UserMailer to send a welcome Email after save
+        ContactMailer.thanks_email(@speaker_submission).deliver
+        format.html { redirect_to root_path, notice: 'Thank you for your submission.' }
         format.json { render action: 'show', status: :created, location: @speaker_submission }
       else
         format.html { render action: 'new' }
