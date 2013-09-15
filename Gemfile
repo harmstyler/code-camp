@@ -57,3 +57,5 @@ gem 'pg'
 gem 'rails_12factor', group: :production
 
 gem 'navigasmic'
+gem 'mail'
+gem 'postmark-rails'
