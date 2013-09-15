@@ -1,0 +1,2 @@
+module SpeakerSubmissionsHelper
+end
