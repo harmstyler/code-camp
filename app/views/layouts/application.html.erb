@@ -69,6 +69,18 @@
 
     <%= render "parts/header" %>
 
+    <% if notice %>
+    <div class="alert alert-warning fade in">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <%= notice %>
+    </div>
+    <% end %>
+    <% if alert %>
+    <div class="alert alert-danger fade in">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <%= alert %>
+    </div>
+    <% end %>
     <%= yield %>
 
     <footer class="main">
@@ -76,8 +88,6 @@
             South Dakota Code Camp
         </div></a>
     </footer>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
 </body>
 </html>
