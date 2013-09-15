@@ -18,6 +18,7 @@
  *= require sessions
  *= require speakers
  *= require subscribers
+ *= require speaker_submissions
  *= require complimentary
  *= require footer
  *= require_self
