@@ -12,6 +12,7 @@
  *= require structure
  *= require header
  *= require navigation
+ *= require alert
  *= require content
  *= require schedule
  *= require sessions

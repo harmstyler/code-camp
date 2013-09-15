@@ -13,6 +13,7 @@
 //= require modernizr
 //= require jquery-1.10.2
 //= require turbolinks
+//= require alert
 //= require app
 jQuery(document).ready(function() {
   setTimeout(function() {
