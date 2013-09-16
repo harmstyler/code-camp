@@ -13,6 +13,25 @@ ActiveAdmin.register_page "Dashboard" do
     end # row
     columns do
       column do
+        panel "Recently Submitted Sessions" do
+          table_for SpeakerSubmission.order('created_at desc').limit(10) do
+            column("Title")   {|speaker_submission| link_to(speaker_submission.title, admin_speaker_submission_path(speaker_submission))}
+            column("Name"){|speaker_submission| link_to(speaker_submission.name, admin_speaker_submission_path(speaker_submission)) }
+            column("Email"){|speaker_submission| mail_to(speaker_submission.email) }
+          end
+        end
+      end
+      column do
+        panel "Subscribed Users" do
+          table_for Subscriber.order('created_at desc').limit(10) do
+            column("Name") {|subscriber| link_to(subscriber.name, admin_subscriber_path(subscriber))}
+            column("Email") {|subscriber| mail_to(subscriber.email)}
+          end
+        end
+      end
+    end # row
+    columns do
+      column do
         panel "Recently Created Sessions" do
           table_for Session.order('created_at desc').limit(10) do
             column("State")   {|session| status_tag(session.state)}
