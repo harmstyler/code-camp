@@ -2,7 +2,7 @@
 @import "mixins";
 body {
     background: $bodyColor url(<%= asset_url 'hero_thin.jpg' %>) no-repeat center top;
-    background-size: auto 75px;
+    background-size: auto 74px;
     background-attachment: fixed;
     &.home {
         background: $bodyColor url(<%= asset_url 'hero.jpg' %>) no-repeat center top;
@@ -12,7 +12,6 @@ body {
 
 @media only screen and (min-width: 30em) {
     body {
-        background-size: auto 100px;
         &.home {
             background-size: auto 400px;
         }
@@ -21,7 +20,6 @@ body {
 
 @media only screen and (min-width: 48em) {
     body {
-        background-size: auto 100px;
         &.home {
             background-size: auto 500px;
         }
@@ -30,9 +28,8 @@ body {
 
 @media only screen and (min-width: 64em) {
     body {
-        background-position: center -150px;
-        background-size: auto 250px;
         &.home {
+            background-position: center -150px;
             background-size: auto 700px;
         }
     }
