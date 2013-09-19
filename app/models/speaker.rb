@@ -13,4 +13,7 @@ class Speaker < ActiveRecord::Base
   def state
     display ? VISIBLE : HIDDEN
   end
+  def md5
+    Digest::MD5.hexdigest(email)
+  end
 end

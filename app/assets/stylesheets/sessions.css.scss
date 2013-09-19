@@ -9,10 +9,30 @@
 
 .session-index {
     ul {
+        margin-left: 0;
+        padding-left: 0;
+        text-align: left;
         li {
             display: block;
             padding-left: 0;
             text-align: left;
         }
     }
+}
+
+@media only screen and (min-width: 30em) {
+
+}
+
+@media only screen and (min-width: 48em) {
+    .session-index {
+        li {
+            float: left;
+            width: 50%;
+        }
+    }
+}
+
+@media only screen and (min-width: 64em) {
+
 }

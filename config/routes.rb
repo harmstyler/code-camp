@@ -5,7 +5,7 @@ Codecamp::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   #Root
-  root :to => 'high_voltage/pages#show', :id => 'home'
+  root :to => 'pages#show', :id => 'home'
 
   #Speakers
   resources :speakers, :only => [ :show, :index ]
@@ -14,7 +14,7 @@ Codecamp::Application.routes.draw do
   resources :sessions, :only => [ :show, :index ]
 
   #Subscribers
-  resources :subscribers
+  resources :subscribers, :only => [ :new, :index ]
 
   #SpeakerSubmissions
   # resources :speaker_submissions, :path => '/submit', :only => [ :new, :create ]

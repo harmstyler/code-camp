@@ -8,10 +8,38 @@
 }
 .speaker-index {
     ul {
+        margin-left: 0;
         padding-left: 0;
         text-align: left;
         li {
             display: block;
+            margin-bottom: 2em;
         }
     }
+}
+.img-circle {
+    border-radius: 50%;
+}
+
+.speaker {
+    img {
+        margin-right: 2em;
+    }
+}
+
+@media only screen and (min-width: 30em) {
+
+}
+
+@media only screen and (min-width: 48em) {
+    .speaker-index {
+        li {
+            float: left;
+            width: 50%;
+        }
+    }
+}
+
+@media only screen and (min-width: 64em) {
+
 }
