@@ -5,3 +5,22 @@
     background: pink;
     padding: 1em;
 }
+
+.speaker-submission {
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        max-width: 100%;
+    }
+    ol {
+        margin-left: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+    label, button {
+        float: left;
+    }
+    .speaker_submission {
+        margin: 2em 0;
+    }
+}
