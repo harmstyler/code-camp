@@ -16,4 +16,16 @@ class Session < ActiveRecord::Base
   def state
     display ? VISIBLE : HIDDEN
   end
+  def summary
+    summary = ''
+    if abstract
+      length = abstract.length
+      summary = abstract
+      if length > 140
+        summary.slice! 140..-1
+        summary += '...'
+      end
+    end
+    summary
+  end
 end

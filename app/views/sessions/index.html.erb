@@ -1,17 +1,5 @@
-<main role="main">
-    <section class="hero">
-        <div class="line1">
-            It's coming...
-        </div>
-        <div class="line2">
-            ...Nov 9, 2013
-        </div>
-        <div class="line3">
-            <a href="http://sdcodecamp.eventbrite.com/">Register Now</a>
-        </div>
-    </section>
-</main>
-<section class="session-index main-content clearfix" id="SessionIndex">
+
+<section class="session-index interior-content clearfix" id="SessionIndex">
 <h1 class="pagetitle">Sessions</h1>
 
 <% if @sessions.any? %>
@@ -19,16 +7,15 @@
     <% @sessions.each do |session| %>
     <li class="session">
         <article>
-            <h4><%= link_to session.title, session_path(session) %></h4>
+            <h3><%= link_to session.title, session_path(session) %></h3>
             <p class="attribution">Presented by: <%= link_to session.speaker.fullname, speaker_path(session.speaker) %></p>
             <p class="summary"><%= session.summary %></p>
-
         </article>
     </li>
     <% end %>
   </ul>
 <% else %>
-No sessions
+    <p><a href="/submit">Call for Speakers</a></p>
 <% end %>
 
 </section>
