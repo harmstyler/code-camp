@@ -8,7 +8,8 @@ Codecamp::Application.routes.draw do
   root :to => 'pages#show', :id => 'home'
 
   #Speakers
-  resources :speakers, :only => [ :show, :index ]
+  resources :speakers, :only => [ :index ]
+  get '/speakers/:slug,:id', to: 'speakers#show', as: 'speaker'
 
   #Sessions
   resources :sessions, :only => [ :show, :index ]

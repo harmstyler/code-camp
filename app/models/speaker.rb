@@ -1,6 +1,8 @@
 class Speaker < ActiveRecord::Base
   validates_presence_of :firstname, :lastname, :email
 
+  before_save :slugify
+
   HIDDEN = "hidden"
   VISIBLE = "visible"
 
@@ -16,4 +18,8 @@ class Speaker < ActiveRecord::Base
   def md5
     Digest::MD5.hexdigest(email)
   end
+  private
+    def slugify
+      self.slug = [fullname.parameterize].join("-") if slug.blank?
+    end
 end
