@@ -1,13 +1,17 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "mixins";
 [class^="speaker-"],[class*=" speaker-"] {
     h1 {
         text-align: left;
     }
 }
+
 .speaker-index {
     ul {
+        @include flex();
+        flex-wrap: wrap;
         margin-left: 0;
         padding-left: 0;
         text-align: left;
@@ -34,7 +38,7 @@
 @media only screen and (min-width: 48em) {
     .speaker-index {
         li {
-            float: left;
+            padding-right: 10px;
             width: 50%;
         }
     }
