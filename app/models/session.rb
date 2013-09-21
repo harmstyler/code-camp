@@ -4,6 +4,8 @@ class Session < ActiveRecord::Base
   belongs_to :session_time
   belongs_to :session_room
 
+  before_save :slugify
+
   HIDDEN = "hidden"
   VISIBLE = "visible"
 
@@ -28,4 +30,8 @@ class Session < ActiveRecord::Base
     end
     summary
   end
+  private
+    def slugify
+      self.slug = [title.parameterize].join("-") if slug.blank?
+    end
 end

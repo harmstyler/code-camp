@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
 # Check if the current slug is not the cannonical one.
   def bad_slug?(object)
-    params[:id] != object.to_param
+    params[:slug] != object.slug
   end
 
   # 301 redirect to canonical slug.
@@ -13,7 +13,8 @@ class ApplicationController < ActionController::Base
       redirect_to params.merge({
                     :controller => controller_name,
                     :action => params[:action],
-                    :id => object.to_param,
+                    :slug => object.slug,
+                    :id => object.id,
                     :status => :moved_permanently
                   })
   end

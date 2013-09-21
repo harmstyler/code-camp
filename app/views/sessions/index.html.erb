@@ -8,7 +8,7 @@
     <li class="session">
         <article>
             <h3><%= link_to session.title, session_path(session) %></h3>
-            <p class="attribution">Presented by: <%= link_to session.speaker.fullname, speaker_path(session.speaker) %></p>
+            <p class="attribution">Presented by: <%= link_to session.speaker.fullname, speaker_slug_path(session.speaker.slug,session.speaker) %></p>
             <p class="summary"><%= session.summary %></p>
         </article>
     </li>

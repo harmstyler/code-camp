@@ -6,6 +6,6 @@ class SpeakersController < ApplicationController
   # /speakers/:id
   def show
     @speaker = Speaker.find(params[:id])
-    redirect_to_good_slug(@speaker) and return if bad_slug?(@speaker)
+    redirect_to_good_slug(@speaker) if bad_slug?(@speaker)
   end
 end

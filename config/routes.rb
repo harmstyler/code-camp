@@ -9,10 +9,13 @@ Codecamp::Application.routes.draw do
 
   #Speakers
   resources :speakers, :only => [ :index ]
-  get '/speakers/:slug,:id', to: 'speakers#show', as: 'speaker'
+  get '/speakers/:slug,:id', to: 'speakers#show', as: 'speaker_slug'
+  get '/speakers/:id', to: 'speakers#show', as: 'speaker'
 
   #Sessions
-  resources :sessions, :only => [ :show, :index ]
+  resources :sessions, :only => [ :index ]
+  get '/sessions/:slug,:id', to: 'sessions#show', as: 'session_slug'
+  get '/sessions/:id', to: 'sessions#show', as: 'session'
 
   #Subscribers
   resources :subscribers, :only => [ :new, :index ]
@@ -28,7 +31,7 @@ Codecamp::Application.routes.draw do
   #Pages
   get '/location', to: 'high_voltage/pages#show', :id=> 'location'
 
-  get 'browser' => 'browser#index'
+  # get 'browser' => 'browser#index'
 
 
 end
