@@ -1,34 +1,33 @@
-<article class="schedule row" id="Schedule">
-    <div class="col-12 col-lg-12">
-        <h1 class="pagetitle">Codecamp Schedule</h1>
-        <table border="0" cellpadding="2" cellspacing="0" class=
-        "table table-hover" style="width: 100%" summary="South Dakota Code Camp Schedule"
-        width="100%">
-            <thead>
-                <th>Time</th>
-                <% @session_rooms.each do |room| %>
-                <th class="room-heading"><%= room.name %></th>
-                <% end %>
-            </thead>
-            <tbody>
-                <% @session_times.each_with_index do |session_time, index| %>
-                <tr>
-                    <td>
-                        <h5><%= session_time.to_s %></h5>
-                    </td>
-                    <% @schedule[index].each do |session| %>
-                        <% if session != "" %>
-                            <td>
-                            <%= link_to session, session_path(session) %><br>
-                            <%= session.speaker %>
-                            </td>
-                        <% else %>
-                            <td>tba</td>
-                        <% end %>
+<section class="schedule-index interior-content clearfix" id="ScheduleIndex">
+    <h1 class="pagetitle">Codecamp Schedule</h1>
+    <table border="0" cellpadding="2" cellspacing="0" class=
+    "table table-hover" style="width: 100%" summary="South Dakota Code Camp Schedule"
+    width="100%">
+        <thead>
+            <th>Time</th>
+            <% @session_rooms.each do |room| %>
+            <th class="room-heading"><%= room.name %></th>
+            <% end %>
+        </thead>
+        <tbody>
+            <% @session_times.each_with_index do |session_time, index| %>
+            <tr>
+                <td>
+                    <h3><%= session_time.to_s %></h3>
+                </td>
+                <% @schedule[index].each do |session| %>
+                    <% if session != "" %>
+                        <td>
+                        <%= link_to session, session_slug_path(session.slug,session) %><br>
+                        <%= session.speaker %>
+                        </td>
+                    <% else %>
+                        <td>tba</td>
                     <% end %>
-                </tr>
                 <% end %>
-            </tbody>
-        </table>
-    </div>
-</article>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+
+</section>

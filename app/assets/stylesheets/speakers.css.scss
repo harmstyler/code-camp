@@ -12,6 +12,7 @@
     ul {
         @include flex();
         flex-wrap: wrap;
+        justify-content: space-between;
         margin-left: 0;
         padding-left: 0;
         text-align: left;
@@ -38,8 +39,7 @@
 @media only screen and (min-width: 48em) {
     .speaker-index {
         li {
-            padding-right: 10px;
-            width: 50%;
+            width: 48%;
         }
     }
 }
