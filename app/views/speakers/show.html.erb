@@ -12,9 +12,15 @@
     <% end %>
     </div>
     <div class="social">
+    <% if @speaker.twitter %>
         <p>Twitter: <a href="http://twitter.com/<%= @speaker.twitter %>"><%= @speaker.twitter %></a>
-        <p>Company: <a href="<%= @speaker.company_url %>"><%= @speaker.company %></a>
+    <% end %>
+    <% if @speaker.company %>
+        <p>Company: <% if @speaker.company_url %><a href="<%= @speaker.company_url %>"><% end %><%= @speaker.company %><% if @speaker.company_url %></a><% end %>
+    <% end %>
+    <% if @speaker.personal_site %>
         <p><a href="<%= @speaker.personal_site %>">Personal Website</a>
+    <% end %>
     </div>
 </div>
 
