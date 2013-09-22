@@ -9,5 +9,5 @@ class PagesController < HighVoltage::PagesController
       else
         'application'
       end
-   end
+    end
 end
