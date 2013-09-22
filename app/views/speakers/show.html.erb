@@ -1,13 +1,21 @@
 <section class="speaker-show interior-content clearfix">
 
-
 <h1 class="pagetitle"><%= @speaker.fullname %></h1>
 
-<% if @speaker.bio %>
-<div class="bio">
-    <h6>Bio:</h6>
-    <%= simple_format(@speaker.bio) %>
+<div class="details">
+    <div class="bio">
+        <h6>Bio:</h6>
+    <% if @speaker.bio %>
+        <%= simple_format(@speaker.bio) %>
+    <% else %>
+        <p>Bio coming soon...
+    <% end %>
+    </div>
+    <div class="social">
+        <p>Twitter: <a href="http://twitter.com/<%= @speaker.twitter %>"><%= @speaker.twitter %></a>
+        <p>Company: <a href="<%= @speaker.company_url %>"><%= @speaker.company %></a>
+        <p><a href="<%= @speaker.personal_site %>">Personal Website</a>
+    </div>
 </div>
-<% end %>
 
 </section>

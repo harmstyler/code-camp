@@ -34,6 +34,11 @@
 
 .speaker-show {
     text-align: left;
+    .details {
+        @include flex();
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
 
 .bio {
@@ -50,6 +55,11 @@
 @media only screen and (min-width: 48em) {
     .speaker-index {
         li {
+            width: 48%;
+        }
+    }
+    .speaker-show {
+        .gravitar,.social,.bio {
             width: 48%;
         }
     }
