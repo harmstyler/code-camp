@@ -59,3 +59,4 @@ gem 'rails_12factor', group: :production
 gem 'navigasmic'
 gem 'mail'
 gem 'postmark-rails'
+gem 'meta-tags', :require => 'meta_tags'

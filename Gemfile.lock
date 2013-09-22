@@ -134,6 +134,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    meta-tags (1.5.0)
+      actionpack
     method_source (0.8.1)
     mime-types (1.23)
     mini_portile (0.5.1)
@@ -255,6 +257,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   mail
+  meta-tags
   navigasmic
   pg
   postmark-rails
