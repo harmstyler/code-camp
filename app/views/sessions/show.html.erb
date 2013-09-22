@@ -1,9 +1,9 @@
-<section class="session-show main-content">
+<section class="session-show interior-content clearfix">
 
-<% if @session %>
 <h1 class="pagetitle"><%= @session.title %></h1>
-<% else %>
-No session found
-<% end %>
+
+<p class="attribution">Presented by: <%= link_to @session.speaker.fullname, speaker_slug_path(@session.speaker.slug,@session.speaker) %></p>
+
+<div class="abstract"><%= simple_format(@session.abstract) %></div>
 
 </section>

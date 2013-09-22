@@ -6,6 +6,10 @@
     h1 {
         text-align: left;
     }
+    .attribution {
+        font-size: .9em;
+        padding-bottom: .1em;
+    }
 }
 
 .session-index {
@@ -27,9 +31,9 @@
     h3 {
         text-shadow: none;
     }
-    .attribution {
-        font-size: .9em;
-    }
+}
+.session-show {
+    text-align: left;
 }
 
 @media only screen and (min-width: 30em) {
