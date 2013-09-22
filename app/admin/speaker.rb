@@ -5,13 +5,14 @@ ActiveAdmin.register Speaker do
       f.input :lastname
       f.input :email, :as => :email
       f.input :display, :label => "Display Speaker"
+      f.input :bio
       f.input :slug
     end
     f.actions
   end
   controller do
     def permitted_params
-      params.permit(:speaker => [:firstname, :lastname, :email, :display, :slug])
+      params.permit(:speaker => [:firstname, :lastname, :email, :display, :bio, :slug])
     end
   end
 end

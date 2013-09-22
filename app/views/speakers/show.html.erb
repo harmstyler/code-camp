@@ -1,9 +1,13 @@
-<section class="session-show main-content">
+<section class="speaker-show interior-content clearfix">
 
-<% if @speaker %>
+
 <h1 class="pagetitle"><%= @speaker.fullname %></h1>
-<% else %>
-No speaker found
+
+<% if @speaker.bio %>
+<div class="bio">
+    <h6>Bio:</h6>
+    <%= simple_format(@speaker.bio) %>
+</div>
 <% end %>
 
 </section>
