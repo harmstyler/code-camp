@@ -9,7 +9,7 @@ var sdcc = {
     menuOpen: true,
     mainMenu: null,
     menuInit: function() {
-        this.mainMenu = document.getElementById('mainNav');
+        this.mainMenu = document.getElementById('main_nav');
         this.closeMenu();
     },
     closeMenu: function() {
@@ -19,13 +19,12 @@ var sdcc = {
         this.mainMenu.style.height = '0';
         this.menuOpen = false;
 
-        var menuLinks = document.getElementById('mainNav').children.length;
+        var menuLinks = document.getElementById('main_nav').children.length;
         var compHeight = 40 + (51 * menuLinks)
 
         if (height < compHeight) {
             this.openedHeight = compHeight + 'px';
         }
-        console.log(compHeight);
     },
     toggleMenu: function() {
         var body = document.getElementsByTagName('body')[0];
@@ -34,7 +33,7 @@ var sdcc = {
             this.closeMenu();
             body.removeAClass('menu-open');
         } else {
-            body.className += 'menu-open';
+            body.className += ' menu-open';
             this.mainMenu.style.height = this.openedHeight;
             this.menuOpen = true;
         }
@@ -50,5 +49,11 @@ HTMLElement.prototype.removeAClass = function(classToRemove) {
             newClassName += classes[i] + " ";
         }
     }
-    this.className = newClassName;
+    this.className = newClassName.trim();
+}
+
+if (typeof String.prototype.trim != 'function') { // detect native implementation
+  String.prototype.trim = function () {
+    return this.replace(/^\s+/, '').replace(/\s+$/, '');
+  };
 }

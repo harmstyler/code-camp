@@ -3,6 +3,10 @@
 footer.main {
     padding: 1em;
     background: white;
+    .g-plus-link {
+        float: right;
+        padding: 1em 0;
+    }
 }
 
 @media only screen and (min-width: 64em) {
