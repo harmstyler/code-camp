@@ -1,5 +1,16 @@
 <!DOCTYPE html>
-
+<% set_meta_tags :HandheldFriendly => "True",
+                  :MobileOptimized => "320",
+                  :viewport => "width=device-width, initial-scale=1.0",
+                  :description     => 'South Dakota Code Camp November 9, 2013 - Sioux Falls, SD. This is an event hosted by the Sioux Falls Developers Group and South Dakota .Net User Group.',
+                  :canonical => "#{request.url}",
+                  :og => {
+                    :title => "South Dakota Code Camp",
+                    :image    => asset_url('facebook_website_share.png'),
+                    :url      => "#{request.url}",
+                    :type     => 'website',
+                    :description     => 'South Dakota Code Camp November 9, 2013 - Sioux Falls, SD. This is an event hosted by the Sioux Falls Developers Group and South Dakota .Net User Group.'
+                  } %>
 <html class="no-js" lang="en">
 <head>
     <%= render "includes/head" %>

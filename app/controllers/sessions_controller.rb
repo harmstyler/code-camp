@@ -1,11 +1,13 @@
 class SessionsController < ApplicationController
   # /sessions
   def index
+    sessions_desc = "Find out about all the sessions at this year's South Dakota Code Camp"
     @sessions = Session.where(speaker_id: Speaker.where(display: true))
     set_meta_tags :title => 'Sessions', :reverse => true,
-                  :description => 'South Dakota Code Camp Sessions',
+                  :description => sessions_desc,
                   :og => {
                     :title    => "South Dakota Code Camp Sessions",
+                    :description    => sessions_desc,
                     :type     => 'article'
                   }
   end
@@ -17,6 +19,7 @@ class SessionsController < ApplicationController
                   :description => "#{@session.summary}",
                   :og => {
                     :title    => "#{@session.title}",
+                    :description    => "#{@session.summary}",
                     :type     => 'article'
                   }
   end

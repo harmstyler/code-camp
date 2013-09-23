@@ -17,5 +17,13 @@ class ScheduleController < ApplicationController
       end
       @schedule.push(rooms)
     end
+    schedule_desc = "SDCC Schedule - An event in Sioux Falls, SD."
+    set_meta_tags :title => '2013 Schedule', :reverse => true,
+              :description => schedule_desc,
+              :og => {
+                :title    => "South Dakota Code Camp Schedule 2013",
+                :description    => schedule_desc,
+                :type     => 'article'
+              }
   end
 end

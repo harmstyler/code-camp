@@ -1,5 +1,12 @@
 <!DOCTYPE html>
-
+<% set_meta_tags :HandheldFriendly => "True",
+                  :MobileOptimized => "320",
+                  :viewport => "width=device-width, initial-scale=1.0",
+                  :canonical => "#{request.url}",
+                  :og => {
+                    :image    => asset_url('facebook_article_share.png'),
+                    :url      => "#{request.url}"
+                    } %>
 <html class="no-js" lang="en">
 <head>
     <%= render "includes/head" %>
