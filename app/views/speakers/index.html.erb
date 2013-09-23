@@ -2,6 +2,8 @@
 <section class="speaker-index interior-content clearfix" id="SpeakerIndex">
 <h1 class="pagetitle">Speakers</h1>
 
+<p><a href="/submit">Call for Speakers</a></p>
+
 <% if @speakers.any? %>
   <ul>
     <% @speakers.each do |speaker| %>
@@ -11,9 +13,6 @@
     </li>
     <% end %>
   </ul>
-<% else %>
-<p><a href="/submit">Call for Speakers</a></p>
-
 <% end %>
 
 </section>
