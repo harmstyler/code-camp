@@ -15,11 +15,11 @@ class SpeakersController < ApplicationController
   def show
     @speaker = Speaker.find(params[:id])
     redirect_to_good_slug(@speaker) if bad_slug?(@speaker)
-    set_meta_tags :title => "#{@speaker.title}", :reverse => true,
-                  :description => "#{@speaker.summary}",
+    set_meta_tags :title => "#{@speaker}", :reverse => true,
+                  :description => "#{@speaker.bio}",
                   :og => {
-                    :title    => "#{@speaker.title}",
-                    :description    => "#{@speaker.summary}",
+                    :title    => "#{@speaker}",
+                    :description    => "#{@speaker.bio}",
                     :type     => 'article'
                   }
   end
