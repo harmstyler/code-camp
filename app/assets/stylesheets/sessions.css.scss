@@ -14,12 +14,8 @@
 
 .session-index {
     ul {
-        @include flex();
-        flex-wrap: wrap;
-        justify-content: space-between;
         margin-left: 0;
         padding-left: 0;
-        text-align: left;
         li {
             display: block;
             padding-left: 0;
@@ -42,8 +38,21 @@
 
 @media only screen and (min-width: 48em) {
     .session-index {
+        ul {
+            @include flex();
+            text-align: left;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            @supports ( not (flex-wrap:wrap) ){
+                display: block;
+            }
+        }
         li {
             width: 48%;
+            @supports ( not (flex-wrap:wrap) ){
+                display: inline-block;
+                float: left;
+            }
         }
     }
 }
