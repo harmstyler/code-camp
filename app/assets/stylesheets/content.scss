@@ -121,6 +121,10 @@
                     color: $sdccLightGreen;
                 }
             }
+    .twitter-follow-button {
+        float: right;
+        margin: 1em 0 1em 1em;
+    }
 
 @media only screen and (min-width: 30em) {
     .hero {
