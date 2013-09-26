@@ -115,6 +115,7 @@
 
             .tweet-content {
                 clear: both;
+                word-break: break-word;
 
                 a {
                     color: $sdccLightGreen;
