@@ -1,4 +1,12 @@
 ActiveAdmin.register Session do
+  index do
+    column :title
+    column :speaker
+    column :session_time
+    column :session_room
+    column :slug
+    default_actions
+  end
   form do |f|
     f.inputs "Session Details" do
       f.input :title

@@ -3,6 +3,9 @@ class Speaker < ActiveRecord::Base
 
   before_save :slugify
 
+  scope :visible, self.where(display: true)
+  scope :hidden, self.where(display: false)
+
   HIDDEN = "hidden"
   VISIBLE = "visible"
 

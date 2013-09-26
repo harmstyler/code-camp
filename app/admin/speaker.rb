@@ -1,4 +1,16 @@
 ActiveAdmin.register Speaker do
+  scope :all, default: true
+  scope :visible
+  scope :hidden
+
+  index do
+    column :firstname
+    column :lastname
+    column :email, :as => :email
+    column :slug
+    default_actions
+  end
+
   form do |f|
     f.inputs "Speaker Details" do
       f.input :firstname
