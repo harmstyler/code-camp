@@ -2,7 +2,7 @@ class SpeakersController < ApplicationController
   # /speakers
   def index
     speakers_desc = "Find out about the speakers at this year's South Dakota Code Camp"
-    @speakers = Speaker.where(display: true)
+    @speakers = Speaker.where(display: true).order("lastname ASC")
     set_meta_tags :title => 'Speakers', :reverse => true,
               :description => speakers_desc,
               :og => {
