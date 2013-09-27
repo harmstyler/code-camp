@@ -5,8 +5,8 @@ class Session < ActiveRecord::Base
   belongs_to :session_room
 
   before_save :slugify
-  after_save    :expire_contact_all_cache
-  after_destroy :expire_contact_all_cache
+  after_save    :expire_session_all_cache
+  after_destroy :expire_session_all_cache
 
   HIDDEN = "hidden"
   VISIBLE = "visible"

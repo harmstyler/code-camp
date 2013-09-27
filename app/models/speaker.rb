@@ -2,8 +2,8 @@ class Speaker < ActiveRecord::Base
   validates_presence_of :firstname, :lastname, :email
 
   before_save :slugify
-  after_save    :expire_contact_all_cache
-  after_destroy :expire_contact_all_cache
+  after_save    :expire_speaker_all_cache
+  after_destroy :expire_speaker_all_cache
 
   scope :visible, -> { where(display: true) }
   scope :hidden, -> { where(display: false) }
@@ -30,7 +30,7 @@ class Speaker < ActiveRecord::Base
     def slugify
       self.slug = [fullname.parameterize].join("-") if slug.blank?
     end
-    def expire_session_all_cache
+    def expire_speaker_all_cache
       Rails.cache.delete('Speaker.all')
     end
 end
