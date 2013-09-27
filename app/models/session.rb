@@ -33,7 +33,7 @@ class Session < ActiveRecord::Base
     summary
   end
   def self.all_cached
-    Rails.cache.fetch('Session.all') { Session.where(speaker_id: Speaker.where(display: true)).order("title ASC") }
+    Rails.cache.fetch('Session.all') { where(speaker_id: Speaker.where(display: true)).order("title ASC") }
   end
   private
     def slugify

@@ -24,7 +24,7 @@ class Speaker < ActiveRecord::Base
     Digest::MD5.hexdigest(email)
   end
   def self.all_cached
-    Rails.cache.fetch('Speaker.all') { Speaker.where(display: true).order("lastname ASC") }
+    Rails.cache.fetch('Speaker.all') { where(display: true).order("lastname ASC") }
   end
   private
     def slugify
