@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   # /sessions
   def index
     sessions_desc = "Find out about all the sessions at this year's South Dakota Code Camp"
-    @sessions = Session.where(speaker_id: Speaker.where(display: true)).order("title ASC")
+    @sessions = Session.all_cached
     set_meta_tags :title => 'Sessions', :reverse => true,
                   :description => sessions_desc,
                   :og => {

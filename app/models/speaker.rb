@@ -2,9 +2,11 @@ class Speaker < ActiveRecord::Base
   validates_presence_of :firstname, :lastname, :email
 
   before_save :slugify
+  after_save    :expire_contact_all_cache
+  after_destroy :expire_contact_all_cache
 
-  scope :visible, self.where(display: true)
-  scope :hidden, self.where(display: false)
+  scope :visible, -> { where(display: true) }
+  scope :hidden, -> { where(display: false) }
 
   HIDDEN = "hidden"
   VISIBLE = "visible"
@@ -21,8 +23,14 @@ class Speaker < ActiveRecord::Base
   def md5
     Digest::MD5.hexdigest(email)
   end
+  def self.all_cached
+    Rails.cache.fetch('Speaker.all') { Speaker.where(display: true).order("lastname ASC") }
+  end
   private
     def slugify
       self.slug = [fullname.parameterize].join("-") if slug.blank?
+    end
+    def expire_session_all_cache
+      Rails.cache.delete('Speaker.all')
     end
 end
