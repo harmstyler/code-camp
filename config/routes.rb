@@ -18,7 +18,8 @@ Codecamp::Application.routes.draw do
   get '/sessions/:id', to: 'sessions#show', as: 'session'
 
   #Subscribers
-  resources :subscribers, :only => [ :new, :index ]
+  post '/subscribers', to: 'subscribers#create', as: 'subscribers'
+  get '/subscribers/new', to: 'subscribers#new', as: 'new_subscriber'
 
   #SpeakerSubmissions
   # resources :speaker_submissions, :path => '/submit', :only => [ :new, :create ]
