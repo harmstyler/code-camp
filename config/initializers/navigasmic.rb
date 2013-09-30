@@ -29,6 +29,7 @@ Navigasmic.setup do |config|
 
     n.item 'Speakers', '/speakers'
     n.item 'Submit a Talk', '/submit'
+    n.item 'Register', 'http://sdcodecamp.eventbrite.com'
 
   end
 
