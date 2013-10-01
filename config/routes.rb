@@ -30,7 +30,8 @@ Codecamp::Application.routes.draw do
   get '/schedule', to: 'schedule#index'
 
   #Pages
-  get '/location', to: 'high_voltage/pages#show', :id=> 'location'
+  # get '/location', to: 'high_voltage/pages#show', :id=> 'location'
+  get '/sponsors', to: 'high_voltage/pages#show', :id=> 'sponsors'
 
   # get 'browser' => 'browser#index'
 
