@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>New Speaker Submission, <%= @speaker_submission.title %></h1>
+    <p>
+    Title: <%= @speaker_submission.title %><br>
+    Name: <%= @speaker_submission.name %><br>
+    Email: <%= @speaker_submission.email %>
+    </p>
+    <h4>Abstract</h4>
+    <p>
+      <%= @speaker_submission.abstract %>
+    </p>
+    <p>
+      You can find more information on the site: <%= link_to @speaker_submission.title, admin_speaker_submission_path(@speaker_submission) %>.
+    </p>
+  </body>
+</html>

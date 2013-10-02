@@ -14,6 +14,7 @@ class SpeakerSubmissionsController < ApplicationController
       if @speaker_submission.save
         # Tell the UserMailer to send a welcome Email after save
         ContactMailer.thanks_email(@speaker_submission).deliver
+        ContactMailer.submission_email(@speaker_submission).deliver
         format.html { redirect_to root_path, notice: 'Thank you for your submission.' }
         format.json { render action: 'show', status: :created, location: @speaker_submission }
       else
