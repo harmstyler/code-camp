@@ -1,5 +1,5 @@
 class ContactMailer < ActionMailer::Base
-  default from: "tyler.harms@gmail.com"
+  default from: "hello@southdakotacodecamp.net"
 
   def thanks_email(speaker_submission)
     @speaker_submission = speaker_submission
