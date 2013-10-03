@@ -16,6 +16,7 @@
         li {
             display: block;
             margin-bottom: 2em;
+            text-align: left;
         }
     }
 }
@@ -46,10 +47,6 @@
 }
 
 @media only screen and (min-width: 30em) {
-
-}
-
-@media only screen and (min-width: 48em) {
     .speaker-index {
         ul {
             @include flex();
@@ -68,6 +65,9 @@
             }
         }
     }
+}
+
+@media only screen and (min-width: 48em) {
     .speaker-show {
         .gravitar,.social,.bio {
             width: 48%;
