@@ -31,6 +31,11 @@
             color: white;
             font-style: italic;
         }
+        .button {
+            @include horizontal($sdccLightGreen,$sdccBlue);
+            font-size: .5em;
+            text-decoration: none;
+        }
     }
 
     .main-content {
@@ -156,6 +161,9 @@
 
         .line3 {
             font-size: 4.25em;
+            .button {
+                font-size: .4em;
+            }
         }
 
     .main-content {
@@ -220,6 +228,9 @@
 
         .line3 {
             font-size: 6.25em;
+            .button {
+                font-size: .3em;
+            }
         }
 
     .main-content, .interior-content {

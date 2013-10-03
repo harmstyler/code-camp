@@ -4,7 +4,8 @@
 @import "mixins";
 [class^="speaker-"],[class*=" speaker-"] {
     h1 {
-        text-align: left;
+        font-size: 4em;
+        padding: .25em 0 .125em 0;
     }
 }
 
@@ -60,7 +61,7 @@
             }
         }
         li {
-            width: 48%;
+            width: 40%;
             @supports ( not (flex-wrap:wrap) ){
                 display: inline-block;
                 float: left;
