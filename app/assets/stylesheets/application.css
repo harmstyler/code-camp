@@ -19,6 +19,7 @@
  *= require speakers
  *= require subscribers
  *= require speaker_submissions
+ *= require sponsors
  *= require complimentary
  *= require footer
  *= require_self
