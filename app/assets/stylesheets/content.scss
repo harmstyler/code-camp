@@ -1,7 +1,9 @@
 @import "variables";
 @import "mixins";
 .pagetitle {
+    font-size: 4em;
     margin-bottom: 1em;
+    padding: .25em 0 .125em 0;
 }
 .hero {
     padding: 2em 0;
