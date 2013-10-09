@@ -22,9 +22,10 @@ class Session < ActiveRecord::Base
   end
   def summary
     summary = ''
-    if abstract
+    if abstract?
       length = abstract.length
-      summary = ActionView::Base.full_sanitizer.sanitize(abstract)
+      summary = abstract.clone
+      summary = ActionView::Base.full_sanitizer.sanitize(summary)
       if length > 140
         summary.slice! 140..-1
         summary += '...'
