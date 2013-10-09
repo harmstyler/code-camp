@@ -5,8 +5,8 @@ class Sponsor < ActiveRecord::Base
       :allow_nil => true,
       :allow_blank => true
 
-  after_save    :expire_speaker_all_cache
-  after_destroy :expire_speaker_all_cache
+  after_save    :expire_sponsor_all_cache
+  after_destroy :expire_sponsor_all_cache
 
   def self.all_cached
     Rails.cache.fetch('Sponsor.all') { all }

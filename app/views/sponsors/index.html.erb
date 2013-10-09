@@ -1,0 +1,22 @@
+<section class="sponsor-index interior-content clearfix" id="SponsorIndex">
+<h1 class="pagetitle cutout">Code Camp Sponsors</h1>
+ <% if @sponsors.any? %>
+ <ul>
+ <% @sponsors.each do |sponsor| %>
+  <li class="sponsor">
+    <% if sponsor.link? %>
+      <a href="<%= sponsor.link %>" target=_blank>
+    <% end %>
+      <% if sponsor.logo? %>
+      <img alt="<%= sponsor.name %>" src="<%= sponsor.logo %>">
+      <% else %>
+      <span class="sponsor-name"><%= sponsor.name %></span>
+      <% end %>
+    <% if sponsor.link? %>
+      </a>
+    <% end %>
+  </li>
+  <% end %>
+  </ul>
+ <% end %>
+</section>
