@@ -21,6 +21,9 @@ Codecamp::Application.routes.draw do
   post '/subscribers', to: 'subscribers#create', as: 'subscribers'
   get '/subscribers/new', to: 'subscribers#new', as: 'new_subscriber'
 
+  #Sponsors
+  resources :sponsors, :only => [ :index ]
+
   #SpeakerSubmissions
   # resources :speaker_submissions, :path => '/submit', :only => [ :new, :create ]
   get '/submit', to: 'speaker_submissions#new', as: 'speaker_submissions'
@@ -31,7 +34,7 @@ Codecamp::Application.routes.draw do
 
   #Pages
   # get '/location', to: 'high_voltage/pages#show', :id=> 'location'
-  get '/sponsors', to: 'high_voltage/pages#show', :id=> 'sponsors'
+  # get '/sponsors', to: 'high_voltage/pages#show', :id=> 'sponsors'
 
   # get 'browser' => 'browser#index'
 
