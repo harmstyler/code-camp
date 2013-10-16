@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131008192448) do
+ActiveRecord::Schema.define(version: 20131016170423) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -105,7 +105,10 @@ ActiveRecord::Schema.define(version: 20131008192448) do
     t.string   "link"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "sort_index"
   end
+
+  add_index "sponsors", ["sort_index"], name: "sponsor_sort_index", unique: true, using: :btree
 
   create_table "subscribers", force: true do |t|
     t.string   "name"

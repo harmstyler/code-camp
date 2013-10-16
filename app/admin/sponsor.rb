@@ -3,6 +3,7 @@ ActiveAdmin.register Sponsor do
     column :name
     column :level
     column :link
+    column :sort_index
     default_actions
   end
   form do |f|
@@ -12,12 +13,13 @@ ActiveAdmin.register Sponsor do
       f.input :level, :as => :select, :collection => ['Gold', 'Silver', 'Bronze']
       f.input :description
       f.input :link
+      f.input :sort_index
     end
     f.actions
   end
   controller do
     def permitted_params
-      params.permit(:sponsor => [:name, :logo, :level, :description, :link])
+      params.permit(:sponsor => [:name, :logo, :level, :description, :link, :sort_index])
     end
   end
 end
