@@ -15,6 +15,7 @@ class SubscribersController < ApplicationController
 
     respond_to do |format|
       if @subscriber.save
+        SubscriberMailer.thanks_email(@subscriber).deliver
         format.html { redirect_to root_path, notice: 'You have been successfully added to the subscriber list.' }
         format.json { render action: 'show', status: :created, location: @subscriber }
       else

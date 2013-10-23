@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<meta content="en-us" http-equiv="Content-Language">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>South Dakota Code Camp Subscribers</title>
+<style type="text/css">
+body {
+    margin:0;
+    padding:0;
+    background-color:#eeeeee;
+    color:#999999;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    -webkit-text-size-adjust: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    color:#39434d !important;
+    margin-bottom:10px !important;
+}
+a, a:link, a:visited {
+    color:#777777;
+    text-decoration:none;
+    border-bottom:1px #777777 dotted;
+}
+a:hover, a:active {
+    text-decoration:none;
+    color:#0f79aa !important;
+    border-bottom:1px #0f79aa dotted !important;
+}
+img {
+    border:0;
+}
+/*Hotmail and Yahoo specific code*/
+.ReadMsgBody { width: 100%;}
+.ExternalClass {width: 100%;}
+.yshortcuts { color: #999999 }
+.yshortcuts a span { color: #777777 }
+/*Hotmail and Yahoo specific code*/
+</style>
+</head>
+
+<body link="#777777" vlink="#777777">
+<table id="container" align="center" cellpadding="0" cellspacing="0" style="width: 100%; margin:0; padding:0; background-color:#eeeeee;">
+
+    <!-- Start of main container -->
+    <tr>
+        <td style="padding:0 20px;">
+
+            <!--Start of header content - row#1-->
+            <table width="620" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse; text-align:left; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px; line-height:15pt; color:#999999; margin:0 auto;">
+
+                <tr>
+                    <td bgcolor="#2a8fbd" style="padding:0; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:15pt; color:#999999;">
+                        <a href="http://southdakotacodecamp.net">
+                        <img src="https://dl.dropboxusercontent.com/s/i1hd93577ukzv89/CC_email.png?token_hash=AAGMhXSZcYVudQjuOuyUwjvc1bgSe3QzOCEPBtT76ugtJg&dl=1" alt="South Dakota Code Camp">
+                        </a>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20" style="font-size:2px; line-height:2px;"></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#FFFFFF" style="padding:15px 20px 10px 20px; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:15pt; color:#999999;">
+
+                        <a href="https://sdcodecamp.eventbrite.com/" >
+                            <img src="http://ebmedia.eventbrite.com/s3-build/6280-rc02-06-94e5763/django/images/logos/eb_home-trans.png" alt="South Dakota Code Camp EventBrite" style="float:right;margin-left:10px;">
+                        </a>
+                        <h2 style="padding:0; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:17pt; color:#39434d; font-weight:lighter; margin-top:0; margin-bottom:10px !important;">Thank you for subscribing with South Dakota Code Camp</h2>
+                        As a reminder, you are not registered for Code Camp until you register on <a href="https://sdcodecamp.eventbrite.com/" >EventBrite</a>. See you on November 9th!
+
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20" style="font-size:2px; line-height:2px;"></td>
+                </tr>
+            </table>
+            <!--End of header content - row#1-->
+
+            <!--Start of content container - row#2-->
+            <table width="620" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse; text-align:left; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px; line-height:15pt; color:#999999; margin:0 auto;">
+                <tr>
+                    <td bgcolor="#FFFFFF" style="padding:10px 20px 15px 20px; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:15pt; color:#999999;">
+
+                        <h2 style="padding:0; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:17pt; color:#39434d; font-weight:lighter; margin-top:0; margin-bottom:10px !important;">Latest Sessions</h2>
+
+                        <table width="580" cellpadding="0" cellspacing="0" style="border-collapse:collapse; text-align:left; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px; line-height:15pt; color:#999999; margin:0 auto;">
+                            <tr>
+                                <td width="580" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:15pt; color:#999999;">
+                                    To view more Sessions visit <%= link_to "South Dakota Code Camp Sessions", sessions_url() %>.
+
+                                    <table width="580" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-width: 0; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:15pt; color:#999999;">
+                                        <% @sessions.each do |session| %>
+                                        <tr>
+                                            <td style="padding:10px 0 5px 0; border-top:1px #eeeeee dashed;">
+                                            <%= link_to session.title, session_slug_url(session.slug, session) %><br>Presented by: <%= link_to session.speaker.fullname, speaker_slug_url(session.speaker.slug,session.speaker) %>
+                                            </td>
+                                        </tr>
+                                        <% end %>
+                                    </table>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20" style="font-size:2px; line-height:2px;"></td>
+                </tr>
+            </table>
+            <!--End of content container - row#2-->
+
+            <!--Start of footer container-->
+            <table width="620" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse; text-align:left; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px; line-height:15pt; color:#999999; margin:0 auto;">
+                <tr>
+                    <td bgcolor="#f4f4f4" style="padding:12px 20px 12px 20px; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:15pt; color:#999999;">
+                        <table width="580" cellpadding="0" cellspacing="0" style="border-collapse:collapse; border-spacing:0; border-width:0;">
+                            <tr>
+                                <td width="180" valign="top"  style="padding:0 20px 0 0; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:15pt; color:#999999;">
+                                    <table width="180" cellpadding="0" cellspacing="0" style="border-collapse:collapse; border-spacing:0; border-width:0;">
+                                        <tr>
+                                            <td width="160"  style="padding:0 0 10px 0; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:100%; color:#999999;" valign="top">
+                                                <a href="http://southdakotacodecamp.net" style="border-bottom:1px #777777 dotted; text-decoration:none; color:#777777;">southdakotacodecamp.net</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="160"  style="padding:0; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:100%; color:#999999;" valign="top">
+                                                <a href="mailto:southdakotacodecamp@gmail.com" style="border-bottom:1px #777777 dotted; text-decoration:none; color:#777777;">southdakotacodecamp@gmail.com</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="180" valign="top"  style="padding:0 20px 0 0; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:15pt; color:#999999;">
+                                    <table width="180" cellpadding="0" cellspacing="0" style="border-collapse:collapse; border-spacing:0; border-width:0;">
+                                        <tr>
+                                            <td width="160"  style="padding:0; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:100%; color:#999999;" valign="top">
+                                            <a href="http://twitter.com/@sdcodecamp" style="border-bottom:1px #777777 dotted; text-decoration:none; color:#777777;">@sdcodecamp</a></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20" style="font-size:2px; line-height:2px;"></td>
+                </tr>
+            </table>
+            <!--End of footer container-->
+
+            <!--Start of company details and unsubscribe link-->
+            <table width="620" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse; text-align:center; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px; line-height:15pt; color:#999999; margin:0 auto;">
+                <tr>
+                    <td style="color:#999999; padding:0 20px 20px 20px; text-align:center;">
+                        Copyright &copy; 2013 South Dakota Code Camp<br>
+                    </td>
+                </tr>
+            </table>
+            <!--End of company details and unsubscribe link-->
+
+        </td>
+    </tr>
+    <!-- End of main container -->
+</table>
+</body>
+</html>
