@@ -16,6 +16,11 @@
                 <td class="time-col"><h2><%= session_time.to_s %></h2></td>
                 <td style="text-align:center;" colspan="3">Registration &amp; Coffee/Rolls</td>
             </tr>
+                <% elsif session_time.to_s == "11:45 AM" %>
+            <tr>
+                <td class="time-col"><h2><%= session_time.to_s %></h2></td>
+                <td style="text-align:center;" colspan="3">Lunch (Provided)</td>
+            </tr>
                 <% else %>
             <tr>
                 <td class="time-col">
