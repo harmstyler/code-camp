@@ -7,5 +7,21 @@
 }
 
 .schedule-index {
-
+    td {
+        padding: 1em .5em;
+    }
+    th {
+        -webkit-font-smoothing: antialiased;
+        border-bottom: 1px solid #555555;
+        color: #555555;
+        font-size: 1.375em;
+    }
+    h2 {
+        -webkit-font-smoothing: antialiased;
+        text-shadow: none;
+    }
 }
+    .time-col {
+        min-width: 2em;
+        width: 8em;
+    }

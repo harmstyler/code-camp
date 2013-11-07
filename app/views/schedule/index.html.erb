@@ -11,9 +11,15 @@
         </thead>
         <tbody>
             <% @session_times.each_with_index do |session_time, index| %>
+                <% if session_time.to_s == " 8:00 AM" %>
             <tr>
-                <td>
-                    <h3><%= session_time.to_s %></h3>
+                <td class="time-col"><h2><%= session_time.to_s %></h2></td>
+                <td style="text-align:center;" colspan="3">Registration &amp; Coffee/Rolls</td>
+            </tr>
+                <% else %>
+            <tr>
+                <td class="time-col">
+                    <h2><%= session_time.to_s %></h2>
                 </td>
                 <% @schedule[index].each do |session| %>
                     <% if session != "" %>
@@ -26,6 +32,7 @@
                     <% end %>
                 <% end %>
             </tr>
+                <% end %>
             <% end %>
         </tbody>
     </table>
