@@ -26,6 +26,11 @@
                 <td class="time-col"><h2><%= session_time.to_s %></h2></td>
                 <td style="text-align:center;" colspan="3">Closing Remarks</td>
             </tr>
+                <% elsif session_time.to_s == " 6:00 PM" %>
+            <tr>
+                <td class="time-col"><h2><%= session_time.to_s %></h2></td>
+                <td style="text-align:center;" colspan="3"><a href="https://www.google.com/maps?saddr=Augustana+College,+South+Summit+Avenue,+Sioux+Falls,+SD&daddr=Monks+House+of+Ale+Repute,+East+8th+Street,+Sioux+Falls,+SD&hl=en&sll=43.522429,-96.739364&sspn=0.01892,0.038581&geocode=FX0ZmAId3N87-iHahRc29_7hVintpKEd-7WOhzHahRc29_7hVg%3BFS6AmAIdaCQ8-iH8Ag-iqvpKPilvHfxupLWOhzH8Ag-iqvpKPg&oq=Monk&mra=ls&t=m&z=14" target="_blank" title="After Party at Monks">After Party @ Monks</a> - Sponsored by Zuercher Technologies</td>
+            </tr>
                 <% else %>
             <tr>
                 <td class="time-col">
