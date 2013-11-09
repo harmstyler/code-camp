@@ -43,7 +43,11 @@
                         <%= session.speaker %>
                         </td>
                     <% else %>
-                        <td>tba</td>
+                        <% if index > 2 %>
+                            <td>Open Spaces</td>
+                        <% else %>
+                            <td>nothing</td>
+                        <% end %>
                     <% end %>
                 <% end %>
             </tr>
