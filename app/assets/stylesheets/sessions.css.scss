@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "mixins";
 [class^="session-"],[class*=" session-"] {
-    .attribution {
+    .attribution,.links {
         font-size: .9em;
         padding-bottom: .1em;
     }
@@ -29,6 +29,13 @@
     text-align: left;
 }
 
+.embed {
+    display: none;
+    > div {
+        display: none;
+    }
+}
+
 @media only screen and (min-width: 30em) {
 
 }
@@ -50,6 +57,15 @@
                 display: inline-block;
                 float: left;
             }
+        }
+    }
+    .embed {
+        display: block;
+        float: right;
+        margin: 0 0 1em 1em;
+        > iframe {
+            width: 32em;
+            @include css3-calc('height', '32em * .89')
         }
     }
 }

@@ -11,6 +11,9 @@ class Session < ActiveRecord::Base
   HIDDEN = "hidden"
   VISIBLE = "visible"
 
+  SPEAKER_DECK_API = "https://speakerdeck.com/oembed.json"
+  SLIDE_SHARE_API = "http://www.slideshare.net/api/oembed/2"
+
   def to_s
     title
   end
@@ -36,11 +39,32 @@ class Session < ActiveRecord::Base
   def self.all_cached
     Rails.cache.fetch('Session.all') { where(speaker_id: Speaker.where(display: true)).order("title ASC") }
   end
+  def iframe
+    if !self.speaker_deck?
+      return ''
+    end
+    uri = if self.speaker_deck.include? "speakerdeck.com"
+      URI(SPEAKER_DECK_API + '?url=' + self.speaker_deck)
+    elsif self.speaker_deck.include? "slideshare.net"
+      URI(SLIDE_SHARE_API + '?url=' + self.speaker_deck + '&format=json')
+    else
+      ''
+    end
+    if uri == ''
+      return ''
+    end
+    puts uri
+    Rails.cache.fetch('Session.iframe.' + self.slug) {
+      response = Net::HTTP.get_response(uri)
+      JSON.parse(response.body)['html']
+    }
+  end
   private
     def slugify
       self.slug = [title.parameterize].join("-") if slug.blank?
     end
     def expire_session_all_cache
       Rails.cache.delete('Session.all')
+      Rails.cache.delete('Session.iframe.' + self.slug)
     end
 end

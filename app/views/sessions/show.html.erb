@@ -4,11 +4,15 @@
 
 <p class="attribution">Presented by: <%= link_to @session.speaker.fullname, speaker_slug_path(@session.speaker.slug,@session.speaker) %></p>
 
+<% if @session.speaker_deck? %>
+    <p class="links">Links: <a id="SpeakerDeckUrl" href="<%= @session.speaker_deck %>">Slides</a></p>
+    <% if @session.iframe != '' %>
+    <div id="SpeakerDeckEmbed" class="embed"><%= @session.iframe.html_safe %></div>
+    <% end %>
+<% end %>
+
 <div class="abstract"><%= simple_format(@session.abstract) %></div>
 
-<% if @session.speaker_deck? %>
-    <p class="speaker-deck"><a id="SpeakerDeckUrl" href="<%= @session.speaker_deck %>">Speaker Deck</a></p>
-    <div id="SpeakerDeckEmbed"></div>
-<% end %>
+
 
 </section>

@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  require 'net/http'
   # /sessions
   def index
     sessions_desc = "Find out about all the sessions at this year's South Dakota Code Camp"

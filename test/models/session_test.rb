@@ -15,4 +15,12 @@ class SessionTest < ActiveSupport::TestCase
     refute session.save, "Saved the session without a speaker"
     refute session.valid?
   end
+
+  test "session iframe should allow for blank speaker decks" do
+    speaker = Speaker.new firstname: "Jackson", lastname: "Harms", email: "jackson@blendisimo.com"
+    speaker.save!
+    session = Session.new speaker: speaker, title: "How to train your dragon", abstract: "Testing with selenium"
+    assert session.save, "Saved the session without a speaker deck"
+    assert session.valid?
+  end
 end
