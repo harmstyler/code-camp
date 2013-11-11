@@ -14,4 +14,5 @@
 //= require jquery-1.10.2
 //= require turbolinks
 //= require alert
+//= require sessions
 //= require app

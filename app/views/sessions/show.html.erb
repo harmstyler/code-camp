@@ -6,4 +6,9 @@
 
 <div class="abstract"><%= simple_format(@session.abstract) %></div>
 
+<% if @session.speaker_deck? %>
+    <p class="speaker-deck"><a id="SpeakerDeckUrl" href="<%= @session.speaker_deck %>">Speaker Deck</a></p>
+    <div id="SpeakerDeckEmbed"></div>
+<% end %>
+
 </section>

@@ -10,6 +10,7 @@ ActiveAdmin.register Session do
   form do |f|
     f.inputs "Session Details" do
       f.input :title
+      f.input :speaker_deck, :as => :url
       f.input :abstract
       f.input :speaker
       f.input :session_time
@@ -20,7 +21,7 @@ ActiveAdmin.register Session do
   end
   controller do
     def permitted_params
-      params.permit(:session => [:speaker_id, :title, :abstract, :session_time_id, :session_room_id, :slug])
+      params.permit(:session => [:speaker_id, :title, :abstract, :session_time_id, :session_room_id, :slug, :speaker_deck])
     end
   end
 end
