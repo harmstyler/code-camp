@@ -9,6 +9,9 @@
         <article>
             <h3><%= link_to session.title, session_slug_path(session.slug, session) %></h3>
             <p class="attribution">Presented by: <%= link_to session.speaker.fullname, speaker_slug_path(session.speaker.slug,session.speaker) %></p>
+            <% if session.speaker_deck? %>
+                <p class="links">Links: <a id="SpeakerDeckUrl" href="<%= session.speaker_deck %>">Slides</a></p>
+            <% end %>
             <p class="summary"><%= session.summary %></p>
         </article>
     </li>

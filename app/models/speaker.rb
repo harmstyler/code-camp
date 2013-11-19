@@ -1,6 +1,8 @@
 class Speaker < ActiveRecord::Base
   validates_presence_of :firstname, :lastname, :email
 
+  has_many :session, :inverse_of => :speaker
+
   before_save :slugify
   after_save    :expire_speaker_all_cache
   after_destroy :expire_speaker_all_cache
