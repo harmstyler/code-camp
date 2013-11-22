@@ -1,0 +1,36 @@
+   _____             __  __       ____        __         __
+  / ___/____  __  __/ /_/ /_     / __ \____ _/ /______  / /_____ _
+  \__ \/ __ \/ / / / __/ __ \   / / / / __ `/ //_/ __ \/ __/ __ `/
+ ___/ / /_/ / /_/ / /_/ / / /  / /_/ / /_/ / ,< / /_/ / /_/ /_/ /
+/____/\____/\__,_/\__/_/ /_/  /_____/\__,_/_/|_|\____/\__/\__,_/
+
+   ______          __        ______
+  / ____/___  ____/ /__     / ____/___ _____ ___  ____
+ / /   / __ \/ __  / _ \   / /   / __ `/ __ `__ \/ __ \
+/ /___/ /_/ / /_/ /  __/  / /___/ /_/ / / / / / / /_/ /
+\____/\____/\__,_/\___/   \____/\__,_/_/ /_/ /_/ .___/
+                                              /_/
+
+# TEAM
+
+    Seth Larson -- Organizer/Developer -- @sclarson
+    Ryan Velgersdyk -- Designer -- @rmvelgersdyk
+    Josh Broton -- Front End Developer -- @joshbroton
+    Tyler Harms -- Server Side Developer -- @harmstyler
+
+# THANKS
+
+    Omnitech -- http://www.omnitech-inc.com
+    Raven Industries -- http://ravenind.com
+    Pluralsight -- http://www.pluralsight.com
+    Innovative Systems -- http://www.innovsys.com
+    Blend Interactive -- http://blendinteractive.com
+    Matthew Paulson Consulting -- http://www.mattpaulson.com
+
+# TECHNOLOGY COLOPHON
+
+    Modernizr -- http://modernizr.com
+    Ruby -- https://ruby-lang.org
+    Rails -- http://rubyonrails.org
+    Heroku -- https://heroku.com
+    GitHub -- https://github.com
