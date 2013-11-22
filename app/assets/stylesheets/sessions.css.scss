@@ -46,7 +46,9 @@
             @include flex();
             text-align: left;
             flex-wrap: wrap;
+            -webkit-flex-flow: wrap;
             justify-content: space-between;
+            -webkit-justify-content: space-between;
             @supports ( not (flex-wrap:wrap) ){
                 display: block;
             }
